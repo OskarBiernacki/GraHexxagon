@@ -1,0 +1,27 @@
+# ninja log v5
+1895	3610	7070612558235843	CMakeFiles/GraHexxagon_Projekt.dir/_AI/AI.cpp.obj	ff17237095704d40
+7	1350	7070612535603986	CMakeFiles/GraHexxagon_Projekt.dir/main.cpp.obj	5a32c026ad609dea
+9	1188	7070618715992834	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Board.cpp.obj	1cd71b24d26ec83f
+28	1895	7070612541064398	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Field.cpp.obj	b73c0f032fb7c25a
+21	2285	7070612544934727	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/EventMenager.cpp.obj	e46af6010ea8a7d7
+6	978	7070782505908699	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Button.cpp.obj	251567e804c5c54
+11	3294	7070783712463679	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/AppGUI.cpp.obj	9d2dab3bfce4b718
+17	1261	7070778564863078	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Menu.cpp.obj	c1a2d63810b7c223
+8	2833	7070778580554283	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Game.cpp.obj	27549c58979220dc
+3295	3898	7070783718476476	GraHexxagon_Projekt.exe	fdd8e98f64860766
+24	1740	7070778569643428	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Scoreboard.cpp.obj	88962ca5bce1c7c
+30	1617	7070778568413337	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/LoadGame.cpp.obj	25e6fa1ce600d1fa
+15	1119	7070730685578065	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/Background.cpp.obj	f351a43d0af18c17
+5	1242	7071008794229911	CMakeFiles/GraHexxagon_Projekt.dir/main.cpp.obj	27f96dc9d305b3b4
+45	1447	7071008796159895	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Button.cpp.obj	56dfebd9475659c6
+59	1538	7071008797119897	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Menu.cpp.obj	bda55e7deb23ad97
+10	1574	7071008797539999	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Board.cpp.obj	63ca01cd27c467cc
+27	1613	7071008797939893	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Field.cpp.obj	7d77d1f7dc7d02b9
+36	1889	7071008800679867	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/EventMenager.cpp.obj	215ff43c4ead666d
+53	1930	7071008801099917	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Scoreboard.cpp.obj	e38409074834c6ce
+1244	2412	7071008805919883	CMakeFiles/GraHexxagon_Projekt.dir/_AI/AI.cpp.obj	6968e7e7b5ff81f2
+1539	2610	7071008807939891	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/Background.cpp.obj	46b077912bbc4948
+1447	2659	7071008808419861	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/LoadGame.cpp.obj	478f354b923d0af4
+20	2922	7071008811019886	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Game.cpp.obj	de5fa79d8b07a544
+15	3392	7071008815729867	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/AppGUI.cpp.obj	ca4443eb3be12ff4
+3392	4013	7071008821910350	GraHexxagon_Projekt.exe	4e40655759d3fc80

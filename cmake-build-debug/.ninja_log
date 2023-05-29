@@ -1,0 +1,12 @@
+# ninja log v5
+12	3065	7070035752390938	CMakeFiles/GraHexxagon_Projekt.dir/main.cpp.obj	8ad55db16c28934a
+7027	7608	7070035798168934	GraHexxagon_Projekt.exe	b0f7acdf4fcff13c
+1	561	7071008778819861	build.ninja	41098e9fb4a7632f
+59	3742	7070035758511439	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Field.cpp.obj	1158fa2cc4ee60e3
+3066	6024	7070035782341517	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/EventMenager.cpp.obj	202fd59ef6b38cbf
+24	2349	7070035745621786	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Board.cpp.obj	cb5544bc129ceda3
+33	6712	7070035789265383	CMakeFiles/GraHexxagon_Projekt.dir/_Graphic/AppGUI.cpp.obj	5baf0ea2fde95b1f
+44	7026	7070035792392711	CMakeFiles/GraHexxagon_Projekt.dir/_Game/Game.cpp.obj	ff87e242e439f8cc
+73	3326	7070035754791141	CMakeFiles/GraHexxagon_Projekt.dir/_AI/AI.cpp.obj	24e43cd71dc36a9d
+2352	4750	7070035769502343	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Button.cpp.obj	cfa4bf1e0c441afa
+3327	5355	7070035775668096	CMakeFiles/GraHexxagon_Projekt.dir/_Menu/Menu.cpp.obj	652048ca132835ec

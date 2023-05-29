@@ -1,0 +1,61 @@
+        -:    0:Source:C:/Users/oskar/Desktop/GraHexxagon_Projekt/_Menu/Button.h
+        -:    0:Graph:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Menu\Button.cpp.gcno
+        -:    0:Data:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Menu\Button.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "string"
+        -:    2:#include "SFML/Graphics.hpp"
+        -:    3:#include "iostream"
+        -:    4:#ifndef GRAHEXXAGON_PROJEKT_BUTTON_H
+        -:    5:#define GRAHEXXAGON_PROJEKT_BUTTON_H
+        -:    6:
+        -:    7:using namespace sf;
+        -:    8:
+        -:    9:class Button {
+        -:   10:private:
+        -:   11:    std::string texOfButton;
+        -:   12:    Text textbox;
+        -:   13:    Font font;
+        -:   14:    RectangleShape endBarBackground;
+        -:   15:    void setStyle();
+        -:   16:    float x=0,y=0;
+        -:   17:
+function _ZNK6Button5pFptrMUlvE_cvPFvvEEv called 2 returned 100% blocks executed 100%
+function _ZN6Button5pFptrMUlvE_4_FUNEv called 0 returned 0% blocks executed 0%
+function _ZNK6Button5pFptrMUlvE_clEv called 0 returned 0% blocks executed 0%
+        6:   18:    void(*pFptr)() = [](){ std::cout<<"Not implemented onClick\n"; };
+        2:   18-block  0
+call    0 returned 2
+    $$$$$:   18-block  1
+call    1 never executed
+        2:   18-block  2
+        2:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+call    2 never executed
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+call    3 never executed
+        -:   19:
+        -:   20:    bool isGenerated=false;
+        -:   21:    void generateStyle();
+        -:   22:
+        -:   23:public:
+        -:   24:    Button();
+        -:   25:    Button(std::string text);
+        -:   26:
+        -:   27:    void setPosition(float x, float y);
+        -:   28:    void printButton(sf::RenderWindow &window);
+        -:   29:
+        -:   30:    void setOnClick(void(*function)()){
+        -:   31:        pFptr=function;
+        -:   32:    }
+        -:   33:    void onClick(){
+        -:   34:        pFptr();
+        -:   35:    }
+        -:   36:    void onFocus(bool isFocus);
+        -:   37:    RectangleShape& getShape(){return this->endBarBackground;}
+        -:   38:};
+        -:   39:
+        -:   40:
+        -:   41:#endif //GRAHEXXAGON_PROJEKT_BUTTON_H

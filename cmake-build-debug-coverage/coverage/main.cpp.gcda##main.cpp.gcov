@@ -1,0 +1,38 @@
+        -:    0:Source:C:/Users/oskar/Desktop/GraHexxagon_Projekt/main.cpp
+        -:    0:Graph:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <iostream>
+        -:    2:#include "_Game/Board.h"
+        -:    3:#include "_Graphic/AppGUI.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+function main called 1 returned 100% blocks executed 83%
+        1:    7:int main() {
+        1:    7-block  0
+        1:    8:    AppGUI *gui = new AppGUI();
+        1:    8-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    %%%%%:    8-block  1
+call    4 never executed
+        1:    9:    return 0;
+        1:    9-block  0
+        1:    9-block  1
+function _GLOBAL__sub_I_main called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
+        4:   10:}
+        1:   10-block  0
+        1:   10-block  1
+call    0 returned 1
+        1:   10-block  2
+        1:   10-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   10-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0

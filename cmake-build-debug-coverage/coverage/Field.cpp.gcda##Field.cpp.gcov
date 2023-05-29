@@ -1,0 +1,441 @@
+        -:    0:Source:C:/Users/oskar/Desktop/GraHexxagon_Projekt/_Game/Field.cpp
+        -:    0:Graph:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Game\Field.cpp.gcno
+        -:    0:Data:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Game\Field.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "Field.h"
+        -:    2:#include "Board.h"
+        -:    3:#include "iostream"
+        -:    4:#include "vector"
+        -:    5:#include "SFML/Graphics.hpp"
+        -:    6:#include "../_Graphic/EventMenager.h"
+        -:    7:#include "Game.h"
+        -:    8:#include "vector"
+        -:    9:
+        -:   10:using namespace sf;
+        -:   11:
+        -:   12:Board* Field::board=nullptr;
+function __tcf_1 called 0 returned 0% blocks executed 0%
+        1:   13:vector<Field*> Field::fieldBoard;
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   13-block  0
+    $$$$$:   13-block  1
+call    2 never executed
+function _ZN5Field8setBoardER5Board called 1 returned 100% blocks executed 100%
+        1:   14:void Field::setBoard(Board& board) {
+        1:   14-block  0
+        1:   15:    Field::board=&board;
+        1:   16:    reinterprateBoard();
+        1:   16-block  0
+call    0 returned 1
+        1:   17:}
+        -:   18:
+function _ZN5Field17reinterprateBoardEv called 1 returned 100% blocks executed 69%
+        1:   19:void Field::reinterprateBoard() {
+        1:   19-block  0
+        1:   20:    if(fieldBoard.size()!=0)
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:   21:        fieldBoard.erase(fieldBoard.begin(), fieldBoard.end());
+    $$$$$:   21-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    $$$$$:   21-block  1
+    %%%%%:   21-block  2
+    %%%%%:   21-block  3
+    %%%%%:   21-block  4
+    %%%%%:   21-block  5
+call    7 never executed
+        1:   22:    if(board == nullptr)return;
+        1:   22-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    $$$$$:   22-block  1
+        -:   23:
+       18:   24:    for(int y=0;y<board->board_map.size();y++)
+        1:   24-block  0
+       18:   24-block  1
+call    0 returned 18
+branch  1 taken 17 (fallthrough)
+branch  2 taken 1
+       17:   24-block  2
+        1:   24-block  3
+      171:   25:        for(int x=0;x<board->board_map.at(y).size();x++)
+       17:   25-block  0
+      171:   25-block  1
+call    0 returned 171
+call    1 returned 171
+branch  2 taken 154 (fallthrough)
+branch  3 taken 17
+      154:   25-block  2
+      154:   26:            if(board->board_map.at(y).at(x)!=board->free_space_symbol && board->board_map.at(y).at(x)!=board->disallow_field_symbol)
+      154:   26-block  0
+call    0 returned 154
+call    1 returned 154
+branch  2 taken 61 (fallthrough)
+branch  3 taken 93
+       61:   26-block  1
+call    4 returned 61
+call    5 returned 61
+branch  6 taken 58 (fallthrough)
+branch  7 taken 3
+       58:   26-block  2
+       96:   26-block  3
+      154:   26-block  4
+branch  8 taken 58 (fallthrough)
+branch  9 taken 96
+       58:   27:                fieldBoard.push_back(new Field(x,y,board->board_map.at(y).at(x)));
+       58:   27-block  0
+call    0 returned 58
+call    1 returned 58
+call    2 returned 58
+call    3 returned 58
+branch  4 taken 58 (fallthrough)
+branch  5 taken 0 (throw)
+       58:   27-block  1
+call    6 returned 58
+branch  7 taken 58 (fallthrough)
+branch  8 taken 0 (throw)
+       58:   27-block  2
+    %%%%%:   27-block  3
+call    9 never executed
+call   10 never executed
+        -:   28:}
+        -:   29:
+function _ZN5FieldC2Eiic called 58 returned 100% blocks executed 62%
+      116:   30:Field::Field(int xPoz, int yPoz, char code) {
+       58:   30-block  0
+       58:   30-block  1
+call    0 returned 58
+call    1 returned 58
+call    2 returned 58
+    %%%%%:   30-block  2
+call    3 never executed
+    %%%%%:   30-block  3
+call    4 never executed
+    %%%%%:   30-block  4
+call    5 never executed
+       58:   31:    this->code=code;
+       58:   32:    this->xPoz=xPoz;
+       58:   33:    this->yPoz=yPoz;
+        -:   34:
+       58:   35:    this->shape=CircleShape(this->shapeSize, 6);
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   35-block  0
+call    3 returned 58
+branch  4 taken 58 (fallthrough)
+branch  5 taken 0 (throw)
+       58:   35-block  1
+call    6 returned 58
+    %%%%%:   35-block  2
+call    7 never executed
+    %%%%%:   35-block  3
+       58:   36:    this->shape.rotate(this->degreeBasedShapeTransform);
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   37:    this->shape.setPosition
+       58:   38:        (this->xScale*shape.getRadius()*xPoz+xMove, this->yScale*shape.getRadius()*yPoz+yMove);
+       58:   38-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   38-block  1
+call    3 returned 58
+branch  4 taken 58 (fallthrough)
+branch  5 taken 0 (throw)
+       58:   38-block  2
+call    6 returned 58
+branch  7 taken 58 (fallthrough)
+branch  8 taken 0 (throw)
+       58:   39:    EventMenager::addButtonField(*this);
+       58:   39-block  0
+call    0 returned 58
+branch  1 taken 58 (fallthrough)
+branch  2 taken 0 (throw)
+       58:   40:}
+       58:   40-block  0
+function _ZN5FieldC2Eii called 0 returned 0% blocks executed 0%
+    #####:   41:Field::Field(int xPoz, int yPoz) {
+    $$$$$:   41-block  0
+    $$$$$:   41-block  1
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    %%%%%:   41-block  2
+call    3 never executed
+    %%%%%:   41-block  3
+call    4 never executed
+    %%%%%:   41-block  4
+call    5 never executed
+    #####:   42:    if(board == nullptr){
+branch  0 never executed
+branch  1 never executed
+    #####:   43:        std::cout << "[CRITICAL] - no board field created " << this << "\n";
+    $$$$$:   43-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   43-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   43-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   44:        return;
+    $$$$$:   44-block  0
+        -:   45:    }
+    #####:   46:    Field(xPoz,yPoz,board->field_symbol);
+    $$$$$:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   46-block  1
+call    3 never executed
+    $$$$$:   46-block  2
+        -:   47:}
+        -:   48:
+function _ZN5Field10changeCodeEc called 0 returned 0% blocks executed 0%
+    #####:   49:void Field::changeCode(char code) {
+    $$$$$:   49-block  0
+    #####:   50:    this->code=code;
+    #####:   51:    board->board_map.at(yPoz).at(xPoz)=code;
+    $$$$$:   51-block  0
+call    0 never executed
+call    1 never executed
+    #####:   52:}
+function _ZN5Field10printFieldERN2sf12RenderWindowE called 78126 returned 100% blocks executed 92%
+    78126:   53:void Field::printField(RenderWindow& window){
+    78126:   53-block  0
+    78126:   54:    code=board->board_map.at(yPoz).at(xPoz);
+    78126:   54-block  0
+call    0 returned 78126
+call    1 returned 78126
+    78126:   55:    if(code==board->field_symbol)this->shape.setFillColor(Color::White);
+branch  0 taken 70044 (fallthrough)
+branch  1 taken 8082
+    70044:   55-block  0
+call    2 returned 70044
+    78126:   56:    if(highLighted)this->shape.setFillColor(Color::Yellow);
+    78126:   56-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 78126
+    $$$$$:   56-block  1
+call    2 never executed
+    78126:   57:    if(code==board->player_one)this->shape.setFillColor(Color::Blue);
+    78126:   57-block  0
+branch  0 taken 4041 (fallthrough)
+branch  1 taken 74085
+     4041:   57-block  1
+call    2 returned 4041
+    78126:   58:    if(code==board->player_two)this->shape.setFillColor(Color::Red);
+    78126:   58-block  0
+branch  0 taken 4041 (fallthrough)
+branch  1 taken 74085
+     4041:   58-block  1
+call    2 returned 4041
+        -:   59:
+    78126:   60:    window.draw(this->shape);
+    78126:   60-block  0
+call    0 returned 78126
+    78126:   61:}
+function _ZN5Field14drawFiledBoardERN2sf12RenderWindowE called 1347 returned 100% blocks executed 100%
+     1347:   62:void Field::drawFiledBoard(sf::RenderWindow &window) {
+     1347:   62-block  0
+    79473:   63:    for(Field* f : fieldBoard){
+     1347:   63-block  0
+call    0 returned 1347
+call    1 returned 1347
+    79473:   63-block  1
+call    2 returned 79473
+branch  3 taken 78126 (fallthrough)
+branch  4 taken 1347
+    78126:   63-block  2
+call    5 returned 78126
+    78126:   63-block  3
+call    6 returned 78126
+    78126:   64:        f->printField(window);
+call    0 returned 78126
+branch  1 taken 78126 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   65:    }
+     1347:   66:}
+     1347:   66-block  0
+function _ZN5Field15getPlayerNumberEv called 4 returned 100% blocks executed 75%
+        4:   67:int Field::getPlayerNumber() {
+        4:   67-block  0
+        4:   68:    code=board->board_map.at(yPoz).at(xPoz);
+        4:   68-block  0
+call    0 returned 4
+call    1 returned 4
+        4:   69:    if(this->code==board->player_one)return 1;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    $$$$$:   69-block  0
+        4:   70:    if(this->code==board->player_two)return 2;
+        4:   70-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    $$$$$:   70-block  1
+        4:   71:    return 0;
+        4:   71-block  0
+        -:   72:}
+function _ZN5Field7onClickEv called 2 returned 100% blocks executed 100%
+        2:   73:void Field::onClick() {
+        2:   73-block  0
+        2:   74:    Game::getGame().setFocusedField(*this);
+        2:   74-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   75:}
+        -:   76:
+function _ZN5Field16getOneLayersNextEv called 0 returned 0% blocks executed 0%
+    #####:   77:vector<Field*> & Field::getOneLayersNext(){
+    $$$$$:   77-block  0
+        -:   78:    //generate
+    #####:   79:    if(this->oneLayersNext.size()==0){
+    $$$$$:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:        std::pair<int,int> poz[6]={
+        -:   81:                std::make_pair(-1,1),
+        -:   82:                std::make_pair(1,1),
+        -:   83:                std::make_pair(0,2),
+        -:   84:                std::make_pair(1,-1),
+        -:   85:                std::make_pair(-1,-1),
+        -:   86:                std::make_pair(0,-2)
+        -:   87:        };
+    #####:   88:        for(Field* f : fieldBoard)
+    $$$$$:   88-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:   88-block  1
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:   88-block  2
+call    5 never executed
+    $$$$$:   88-block  3
+call    6 never executed
+    $$$$$:   88-block  4
+    #####:   89:            for(int i=0;i<6;i++)
+    $$$$$:   89-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   89-block  1
+    #####:   90:                if(f->xPoz == this->xPoz+poz[i].first &&  f->yPoz == this->yPoz+poz[i].second)
+    $$$$$:   90-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:   90-block  1
+branch  2 never executed
+branch  3 never executed
+    #####:   91:                    this->oneLayersNext.push_back(f);
+    $$$$$:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   91-block  1
+        -:   92:    }
+        -:   93:
+    #####:   94:    return this->oneLayersNext;
+    $$$$$:   94-block  0
+    $$$$$:   94-block  1
+    %%%%%:   94-block  2
+        -:   95:}
+function _ZN5Field16getTwoLayersNextEv called 0 returned 0% blocks executed 0%
+    #####:   96:vector<Field*> & Field::getTwoLayersNext(){
+    $$$$$:   96-block  0
+        -:   97:    //generate
+    #####:   98:    if(this->twoLayersNext.size()==0){
+    $$$$$:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:        std::pair<int,int> poz[12]={
+        -:  100:
+        -:  101:                std::make_pair(0,4),
+        -:  102:                std::make_pair(0,-4),
+        -:  103:                std::make_pair(1,3),
+        -:  104:                std::make_pair(1,-3),
+        -:  105:                std::make_pair(2,-2),
+        -:  106:                std::make_pair(2,0),
+        -:  107:                std::make_pair(2,2),
+        -:  108:                std::make_pair(-1,3),
+        -:  109:                std::make_pair(-1,-3),
+        -:  110:                std::make_pair(-2,2),
+        -:  111:                std::make_pair(-2,-2),
+        -:  112:                std::make_pair(-2,0),
+        -:  113:        };
+    #####:  114:        for(Field* f : fieldBoard)
+    $$$$$:  114-block  0
+call    0 never executed
+call    1 never executed
+    $$$$$:  114-block  1
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  114-block  2
+call    5 never executed
+    $$$$$:  114-block  3
+call    6 never executed
+    $$$$$:  114-block  4
+    #####:  115:            for(int i=0;i<12;i++)
+    $$$$$:  115-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  115-block  1
+    #####:  116:                if(f->xPoz == this->xPoz+poz[i].first &&  f->yPoz == this->yPoz+poz[i].second)
+    $$$$$:  116-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  116-block  1
+branch  2 never executed
+branch  3 never executed
+    #####:  117:                    this->twoLayersNext.push_back(f);
+    $$$$$:  117-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  117-block  1
+        -:  118:    }
+        -:  119:
+    #####:  120:    return this->twoLayersNext;
+    $$$$$:  120-block  0
+    $$$$$:  120-block  1
+    %%%%%:  120-block  2
+        -:  121:}
+        -:  122:
+function _ZN5Field7getCodeEv called 156252 returned 100% blocks executed 100%
+   156252:  123:char Field::getCode() {
+   156252:  123-block  0
+   156252:  124:    return code=board->board_map.at(yPoz).at(xPoz),code;
+   156252:  124-block  0
+call    0 returned 156252
+call    1 returned 156252
+function _GLOBAL__sub_I__ZN5Field5boardE called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
+        4:  125:}
+        1:  125-block  0
+        1:  125-block  1
+call    0 returned 1
+        1:  125-block  2
+        1:  125-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  125-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0

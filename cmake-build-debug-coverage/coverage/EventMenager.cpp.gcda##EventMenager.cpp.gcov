@@ -1,0 +1,361 @@
+        -:    0:Source:C:/Users/oskar/Desktop/GraHexxagon_Projekt/_Graphic/EventMenager.cpp
+        -:    0:Graph:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Graphic\EventMenager.cpp.gcno
+        -:    0:Data:C:\Users\oskar\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage\CMakeFiles\GraHexxagon_Projekt.dir\_Graphic\EventMenager.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "vector"
+        -:    2:#include "EventMenager.h"
+        -:    3:#include "SFML/Graphics.hpp"
+        -:    4:#include "../_Game/Field.h"
+        -:    5:#include "math.h"
+        -:    6:#include "iostream"
+        -:    7:
+        -:    8:using namespace std;
+        -:    9:using namespace sf;
+function __tcf_1 called 0 returned 0% blocks executed 0%
+        1:   10:vector<Field> EventMenager::buttonsField;
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   10-block  0
+    $$$$$:   10-block  1
+call    2 never executed
+function __tcf_2 called 0 returned 0% blocks executed 0%
+        1:   11:vector<Button*> EventMenager::buttonsButtons;
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   11-block  0
+    $$$$$:   11-block  1
+call    2 never executed
+        -:   12:
+function _Z13distance_calcdddd called 4 returned 100% blocks executed 100%
+        4:   13:double distance_calc(double ax, double ay, double bx, double by){
+        4:   13-block  0
+        4:   14:    int x = ax-bx;
+        4:   15:    int y = ay-by;
+        -:   16:
+        4:   17:    return sqrt(x*x+y*y);
+        4:   17-block  0
+call    0 returned 4
+        -:   18:}
+function _ZN12EventMenager12eventHandlerERN2sf5EventERNS0_12RenderWindowE called 787 returned 100% blocks executed 100%
+      787:   19:void EventMenager::eventHandler(sf::Event& event, sf::RenderWindow& window) {
+      787:   19-block  0
+      787:   20:    fieldClick(event, window);
+      787:   20-block  0
+call    0 returned 787
+      787:   21:    buttonClick(event, window);
+call    0 returned 787
+      787:   22:    buttonFocus(event, window);
+call    0 returned 787
+      787:   23:}
+function _ZN12EventMenager14addButtonFieldER5Field called 58 returned 100% blocks executed 100%
+       58:   24:void EventMenager::addButtonField(Field& field){
+       58:   24-block  0
+       58:   25:    buttonsField.push_back(field);
+       58:   25-block  0
+call    0 returned 58
+       58:   26:}
+        -:   27:
+function _ZN12EventMenager17addButtonsButtonsER6Button called 2 returned 100% blocks executed 100%
+        2:   28:void EventMenager::addButtonsButtons(Button &button) {
+        2:   28-block  0
+        2:   29:    buttonsButtons.push_back(&button);
+        2:   29-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   30:}
+        2:   30-block  0
+        -:   31:
+function _ZN12EventMenager10fieldClickERN2sf5EventERNS0_12RenderWindowE called 787 returned 100% blocks executed 70%
+      787:   32:void EventMenager::fieldClick(Event &event, RenderWindow &window) {
+      787:   32-block  0
+      787:   33:    if(event.type == Event::MouseButtonPressed){
+      787:   33-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 783
+        4:   34:        if(event.mouseButton.button == Mouse::Left){
+        4:   34-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   35:            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+        4:   35-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   36:            vector<Field*> candidates;
+        4:   36-block  0
+call    0 returned 4
+        4:   36-block  1
+call    1 returned 4
+        4:   36-block  2
+    %%%%%:   36-block  3
+call    2 never executed
+      178:   37:            for(Field &f : buttonsField)
+call    0 returned 4
+call    1 returned 4
+      178:   37-block  0
+call    2 returned 178
+branch  3 taken 174 (fallthrough)
+branch  4 taken 4
+      174:   37-block  1
+call    5 returned 174
+      174:   37-block  2
+call    6 returned 174
+      174:   38:                if (f.getShape().getGlobalBounds().contains(static_cast<float>(mousePos.x),static_cast<float>(mousePos.y)))
+call    0 returned 174
+branch  1 taken 174 (fallthrough)
+branch  2 taken 0 (throw)
+      174:   38-block  0
+call    3 returned 174
+branch  4 taken 174 (fallthrough)
+branch  5 taken 0 (throw)
+      174:   38-block  1
+call    6 returned 174
+branch  7 taken 174 (fallthrough)
+branch  8 taken 0 (throw)
+      174:   38-block  2
+call    9 returned 174
+branch 10 taken 2 (fallthrough)
+branch 11 taken 172
+    %%%%%:   38-block  3
+    %%%%%:   38-block  4
+call   12 never executed
+    %%%%%:   38-block  5
+        2:   39:                    candidates.push_back(&f);
+        2:   39-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   39-block  1
+    %%%%%:   39-block  2
+    %%%%%:   39-block  3
+        -:   40:            //Eliminacja bledu przesuniecia i zaznaczania kilku na raz
+        4:   41:            double min=100000;
+        6:   42:            for(Field *f : candidates){
+        4:   42-block  0
+call    0 returned 4
+call    1 returned 4
+        6:   42-block  1
+call    2 returned 6
+branch  3 taken 2 (fallthrough)
+branch  4 taken 4
+        2:   42-block  2
+call    5 returned 2
+        2:   42-block  3
+call    6 returned 2
+        2:   43:                double c = distance_calc(mousePos.x, mousePos.y, f->getShape().getPosition().x+10, f->getShape().getPosition().y+40);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   43-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   43-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   43-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   43-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   43-block  4
+call   15 returned 2
+call   16 returned 2
+    %%%%%:   43-block  5
+call   17 never executed
+    %%%%%:   43-block  6
+    %%%%%:   43-block  7
+call   18 never executed
+    %%%%%:   43-block  8
+    %%%%%:   43-block  9
+        2:   44:                min=min>c?c:min;
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   44-block  0
+    $$$$$:   44-block  1
+        -:   45:            }
+        6:   46:            for(Field *f : candidates)
+        4:   46-block  0
+call    0 returned 4
+call    1 returned 4
+        6:   46-block  1
+call    2 returned 6
+branch  3 taken 2 (fallthrough)
+branch  4 taken 4
+        2:   46-block  2
+call    5 returned 2
+        2:   46-block  3
+call    6 returned 2
+        2:   47:                if(distance_calc(mousePos.x, mousePos.y, f->getShape().getPosition().x+10, f->getShape().getPosition().y+40)==min)
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   47-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   47-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   47-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:   47-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:   47-block  4
+call   15 returned 2
+call   16 returned 2
+branch 17 taken 2 (fallthrough)
+branch 18 taken 0
+    %%%%%:   47-block  5
+call   19 never executed
+    %%%%%:   47-block  6
+    %%%%%:   47-block  7
+call   20 never executed
+    %%%%%:   47-block  8
+    %%%%%:   47-block  9
+        2:   48:                    f->onClick();
+        2:   48-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   48-block  1
+        -:   49:
+        -:   50:        }
+        -:   51:    }
+      787:   52:}
+      787:   52-block  0
+        -:   53:
+function _ZN12EventMenager11buttonClickERN2sf5EventERNS0_12RenderWindowE called 787 returned 100% blocks executed 90%
+      787:   54:void EventMenager::buttonClick(Event &event, RenderWindow &window) {
+      787:   54-block  0
+      787:   55:    if(event.type == Event::MouseButtonPressed) {
+      787:   55-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 783
+        4:   56:        if (event.mouseButton.button == Mouse::Left){
+        4:   56-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 0
+        4:   57:            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+        4:   57-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   58:            for(Button *b : buttonsButtons)
+        4:   58-block  0
+call    0 returned 4
+call    1 returned 4
+        6:   58-block  1
+call    2 returned 6
+branch  3 taken 2 (fallthrough)
+branch  4 taken 4
+        2:   58-block  2
+call    5 returned 2
+        2:   58-block  3
+call    6 returned 2
+        4:   58-block  4
+        4:   58-block  5
+        2:   59:                if (b->getShape().getGlobalBounds().contains(static_cast<float>(mousePos.x),static_cast<float>(mousePos.y)))
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   59-block  0
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   59-block  1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 1
+    %%%%%:   59-block  2
+    %%%%%:   59-block  3
+        1:   60:                    b->onClick();
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   60-block  1
+        -:   61:        }
+        -:   62:    }
+      787:   63:}
+      787:   63-block  0
+        -:   64:
+function _ZN12EventMenager11buttonFocusERN2sf5EventERNS0_12RenderWindowE called 787 returned 100% blocks executed 87%
+      787:   65:void EventMenager::buttonFocus(Event &event, RenderWindow &window) {
+      787:   65-block  0
+      787:   66:    sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+      787:   66-block  0
+call    0 returned 787
+branch  1 taken 787 (fallthrough)
+branch  2 taken 0 (throw)
+     1275:   67:    for(Button *b : buttonsButtons)
+      787:   67-block  0
+call    0 returned 787
+call    1 returned 787
+     1275:   67-block  1
+call    2 returned 1275
+branch  3 taken 488 (fallthrough)
+branch  4 taken 787
+      488:   67-block  2
+call    5 returned 488
+      488:   67-block  3
+call    6 returned 488
+      488:   68:        b->onFocus(b->getShape().getGlobalBounds().contains(static_cast<float>(mousePos.x),static_cast<float>(mousePos.y)));
+call    0 returned 488
+call    1 returned 488
+branch  2 taken 488 (fallthrough)
+branch  3 taken 0 (throw)
+      488:   68-block  0
+call    4 returned 488
+branch  5 taken 488 (fallthrough)
+branch  6 taken 0 (throw)
+      488:   68-block  1
+call    7 returned 488
+branch  8 taken 488 (fallthrough)
+branch  9 taken 0 (throw)
+    %%%%%:   68-block  2
+    %%%%%:   68-block  3
+      787:   69:}
+      787:   69-block  0
+        -:   70:
+function _ZN12EventMenager11resetEventsEv called 1 returned 100% blocks executed 86%
+        1:   71:void EventMenager::resetEvents() {
+        1:   71-block  0
+        3:   72:    while(!buttonsButtons.empty()) {buttonsButtons.pop_back();}
+        3:   72-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   72-block  1
+call    3 returned 2
+        1:   73:    while(!buttonsField.empty())buttonsField.pop_back();
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    $$$$$:   73-block  1
+call    3 never executed
+function _GLOBAL__sub_I__ZN12EventMenager12buttonsFieldE called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 100%
+        4:   74:}
+        1:   74-block  0
+        1:   74-block  1
+call    0 returned 1
+        1:   74-block  2
+        1:   74-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   74-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
