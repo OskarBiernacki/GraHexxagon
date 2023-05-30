@@ -10,6 +10,13 @@ using sf::Music;
 
 class MusicMenager {
 public:
+    static void playClickSound(){
+        Music*  clickSound = new Music();
+        const string clickSoundPath="../_Music/click.ogg";
+        clickSound->openFromFile(clickSoundPath);
+        clickSound->play();
+    }
+
     MusicMenager(){
         std::unique_ptr<Music> music = std::make_unique<sf::Music>();
         music->openFromFile("../_Music/xd.ogg");

@@ -153,6 +153,30 @@ build GraHexxagon_Projekt.exe: CXX_EXECUTABLE_LINKER__GraHexxagon_Projekt_Debug 
 
 
 #############################################
+# Utility command for package
+
+build CMakeFiles/package.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Users\ozifo\Desktop\GraHexxagon_Projekt\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cpack.exe" --config ./CPackConfig.cmake"
+  DESC = Run CPack packaging tool...
+  pool = console
+  restat = 1
+
+build package: phony CMakeFiles/package.util
+
+
+#############################################
+# Utility command for package_source
+
+build CMakeFiles/package_source.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Users\ozifo\Desktop\GraHexxagon_Projekt\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CPackSourceConfig.cmake"
+  DESC = Run CPack packaging tool for source...
+  pool = console
+  restat = 1
+
+build package_source: phony CMakeFiles/package_source.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND

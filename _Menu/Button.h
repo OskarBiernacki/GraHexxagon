@@ -1,6 +1,7 @@
 #include "string"
 #include "SFML/Graphics.hpp"
 #include "iostream"
+#include "../_Music/MusicMenager.h"
 #ifndef GRAHEXXAGON_PROJEKT_BUTTON_H
 #define GRAHEXXAGON_PROJEKT_BUTTON_H
 
@@ -32,6 +33,7 @@ public:
         pFptr=function;
     }
     void onClick(){
+        MusicMenager::playClickSound();
         pFptr();
     }
     void onFocus(bool isFocus);

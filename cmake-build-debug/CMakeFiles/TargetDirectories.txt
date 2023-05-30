@@ -1,3 +1,5 @@
 C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CMakeFiles/GraHexxagon_Projekt.dir
+C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CMakeFiles/package.dir
+C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CMakeFiles/package_source.dir
 C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
