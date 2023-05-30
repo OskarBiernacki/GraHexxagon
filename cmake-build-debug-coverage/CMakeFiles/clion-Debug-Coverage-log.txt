@@ -1,5 +1,14 @@
 "C:\Program Files\JetBrains\CLion 2022.3.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3.3/bin/ninja/win/x64/ninja.exe" -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage -G Ninja -S C:\Users\ozifo\Desktop\GraHexxagon_Projekt -B C:\Users\ozifo\Desktop\GraHexxagon_Projekt\cmake-build-debug-coverage
--- Found SFML 2.5.1 in D:/SFML-2.5.1/lib/cmake/SFML
+-- Found SFML but requested component 'REQUIRED-' is missing in the config defined in D:/SFML-2.5.1/lib/cmake/SFML.
+CMake Warning at CMakeLists.txt:7 (find_package):
+  Found package configuration file:
+
+    D:/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake
+
+  but it set SFML_FOUND to FALSE so package "SFML" is considered to be NOT
+  FOUND.
+
+
 -- Configuring done
 -- Generating done
 -- Build files have been written to: C:/Users/ozifo/Desktop/GraHexxagon_Projekt/cmake-build-debug-coverage

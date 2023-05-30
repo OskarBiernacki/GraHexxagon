@@ -55,9 +55,12 @@ void EventMenager::buttonClick(Event &event, RenderWindow &window) {
     if(event.type == Event::MouseButtonPressed) {
         if (event.mouseButton.button == Mouse::Left){
             sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-            for(Button *b : buttonsButtons)
-                if (b->getShape().getGlobalBounds().contains(static_cast<float>(mousePos.x),static_cast<float>(mousePos.y)))
-                    b->onClick();
+            for(auto b : buttonsButtons) {
+                    if(b != reinterpret_cast<Button*>(0x47))
+                    if (b->getShape().getGlobalBounds().contains(static_cast<float>(mousePos.x),
+                                                                 static_cast<float>(mousePos.y)))
+                        b->onClick();
+            }
         }
     }
 }

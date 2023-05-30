@@ -40,7 +40,6 @@ LoadGame::LoadGame() {
     load_textbox.setCharacterSize(40);
     load_textbox.setPosition(50,100);
     load_textbox.setFillColor(Color::Yellow);
-    string text="Zapisy: \n\n";
 
     try {
         fileNames = getSaves();
@@ -92,7 +91,7 @@ LoadGame::LoadGame() {
        }
    });
 
-    load_textbox.setString(text);
+    load_textbox.setString("Zapisy:");
 
     _backButton = new Button("BACK");
     _backButton->setPosition(600, 500);
