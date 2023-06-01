@@ -17,6 +17,9 @@ private:
     Button* play_ai_button;
     Button* back_button;
 public:
+    /*!
+     * Generuje scene nowej gry
+     */
     NewGameMenu(){
         play_player_button = new Button("Player vs Player");
         play_player_button->setPosition(50, 50);
@@ -43,6 +46,9 @@ public:
             AppGUI::activeAppGui->changeScene(*g);
         });
     }
+    /*!
+     * Wykonywane co tick aplikacji
+     */
     void tick(){
         play_player_button->printButton(AppGUI::activeAppGui->window);
         play_ai_button->printButton(AppGUI::activeAppGui->window);

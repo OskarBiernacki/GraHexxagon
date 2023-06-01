@@ -11,13 +11,26 @@
 class Game : public Scene{
 public:
     static Game& getGame();
-    /**
+    /*!
      * funkcja wywolywana z kazdym przeladowaniem okna
      */
     void tick();
+    /*!
+     * Ustawia dane pole na tryb fokus
+     * @param field pole do ustawienia na fokus
+     */
     void setFocusedField(Field& field);
 
+    /*!
+     * @param window okno do w ktorym wysietlic scene
+     * @param board plansza dla gry
+     */
     Game(sf::RenderWindow &window, Board *board);
+    /*!
+     * @param window okno do w ktorym wysietlic scene
+     * @param board plansza dla gry
+     * @param isEnabledAI czy ma byc wlaczone AI
+     */
     Game(sf::RenderWindow &window, Board *board, bool isEnabledAI);
 private:
     static Game *active_game;

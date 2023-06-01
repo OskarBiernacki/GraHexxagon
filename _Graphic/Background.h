@@ -9,6 +9,9 @@
 #include "vector"
 #include "random"
 
+/*!
+ * Pojedyncza kulka, ktora lata w tle
+ */
 struct bloob{
     float ax,ay;
     float dest_x,dest_y;
@@ -44,17 +47,27 @@ struct bloob{
 
 class Background {
 public:
+    /*!
+     * mala kuleczka w centrum ekranu
+     */
     sf::CircleShape *center;
-     Background(sf::RenderWindow& window) : m_window(window)
-     {
+    /*!
+     * Inicjuje tlo
+     * @param window okno w ktorym bedzie ono wyswietlane
+     */
+    Background(sf::RenderWindow& window) : m_window(window)
+    {
          srand(time(NULL));
          bl=new bloob(250,250,400,500);
 
-         center=new sf::CircleShape(5,20);
+         center=new sf::CircleShape(2,20);
          center->setOrigin(center->getRadius(), center->getRadius());
          center->setPosition(400,300);
-     }
-
+    }
+    /*!
+     * Wykonuje sie co tick okna
+     * @param deltaTime ile sekund mija co tick
+     */
     void tick(float deltaTime) {
         for(bloob* b : stars){
             b->move(deltaTime);

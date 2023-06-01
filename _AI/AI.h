@@ -8,7 +8,14 @@
 
 class AI {
 public:
+    /*!
+     * @param board Plansza ktora bedzie analizowac AI
+     */
     AI(Board& board);
+    /*!
+     * @param playerCode Kod gracza z ktorego perspektywy odbedzie sie analiza
+     * @return Para pol, pierwsze to z ktorego wykonac ruch, a drugie na ktroe wykonac ruch
+     */
     std::pair<Field*, Field*> findNextMove(char playerCode);
 private:
     int scoreOfMove(std::pair<Field*,Field*> move, char playerCode);

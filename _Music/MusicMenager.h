@@ -10,13 +10,18 @@ using sf::Music;
 
 class MusicMenager {
 public:
+    /*!
+     * Wydaje dzwiek klikniecia
+     */
     static void playClickSound(){
         Music*  clickSound = new Music();
         const string clickSoundPath="../_Music/click.ogg";
         clickSound->openFromFile(clickSoundPath);
         clickSound->play();
     }
-
+    /*!
+     * Tworzy obiekt MusicMenagera i dodatkowo ustawia kolejke
+     */
     MusicMenager(){
         std::unique_ptr<Music> music = std::make_unique<sf::Music>();
         music->openFromFile("../_Music/xd.ogg");
@@ -34,6 +39,9 @@ public:
 
         music_list.at(0)->play();
     }
+    /*!
+     * Wykonuje sie co tick okna
+     */
     void tick(){
         if(music_list.at(playing_id)->getStatus() != Music::Playing){
             playing_id=(playing_id+1)%music_list.size();

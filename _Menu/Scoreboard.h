@@ -9,10 +9,27 @@
 
 class Scoreboard : public Scene{
 public:
+    /*!
+     * Scieszka do pliku ze scoreboardem
+     */
     const std::string file_path="scoreboard.txt";
+    /*!
+     * zapisuje wynik do scoreboardu
+     * @param blue wynik niebieskiego gracza
+     * @param red wynik czerwonego gracza
+     */
     static void saveScore(int blue, int red);
+    /*!
+     * tworzy obiekt socreboardu, czyli scene
+     */
     Scoreboard();
+    /*!
+     * Funkcja wykonywana co tick okna
+     */
     void tick();
+    /*!
+     * @return Scieszke do pliku z scoreboardem
+     */
     static std::string getFilePath(){return (new Scoreboard())->file_path ;}
 private:
     Button* back_button;

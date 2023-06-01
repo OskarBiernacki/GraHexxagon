@@ -25,9 +25,22 @@ public:
     Button* upButton;
     Button* downButton;
     Button *load_files_buttons[6];
+    /*!
+     * Wczytuje scene pod indexsem przycisku
+     * @param i index przycisku
+     */
     void loadOnIndex(int i);
+    /*!
+     * uaktualnia nazwy przyciskow
+     */
     void updateButtonsNames();
+    /*!
+     * Konstruktor LoadGame sceny
+     */
     LoadGame();
+    /*!
+     * funkcja wywolywana co tick okna
+     */
     void tick();
 };
 

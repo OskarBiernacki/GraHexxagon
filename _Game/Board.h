@@ -16,11 +16,22 @@ class Board {
         const char player_one = '1';
         const char player_two = '2';
 
+        /*!
+         * Interpretacja planszy w postaci dwuwymiarowego zbioru znakow
+         */
         vector<vector<char> > board_map;
         Board();
 
+        /*!
+         * funkcja zapisu planszy do pliku
+         * @param file_path scieszka do pliku do zapisu
+         */
         void saveBoardToFile(string file_path);
-
+        /*!
+         *
+         * @param file_path scieszka do pliku z ktorego ma wczytac
+         * @return Wczytana plansza
+         */
         static Board* loadBoardFromFile(string file_path);
     private:
         void debugConsoleBoardPrint();

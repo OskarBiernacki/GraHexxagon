@@ -11,7 +11,13 @@ class Menu : public Scene{
 private:
     sf::RenderWindow *window;
 public:
+    /*!
+     * Tworzy obiekt Menu
+     */
     Menu();
+    /*!
+     * Jest to funkcja wywolywana co tick aplikacji
+     */
     void tick();
 };
 
