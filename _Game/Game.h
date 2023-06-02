@@ -7,7 +7,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_GAME_H
 #define GRAHEXXAGON_PROJEKT_GAME_H
 
-
+/*!
+ * @brief Klasa Implementujaca logike gry
+ */
 class Game : public Scene{
 public:
     static Game& getGame();

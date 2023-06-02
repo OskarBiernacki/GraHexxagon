@@ -4,7 +4,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_FIELD_H
 #define GRAHEXXAGON_PROJEKT_FIELD_H
 
-
+/*!
+ * @brief Klasa reprezentujaca pole gry
+ */
 class Field {
 private:
     static vector<Field*> fieldBoard;

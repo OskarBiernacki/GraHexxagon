@@ -12,7 +12,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_LOADGAME_H
 #define GRAHEXXAGON_PROJEKT_LOADGAME_H
 
-
+/*!
+ * @brief Scena do wczytywania gry
+ */
 class LoadGame : public Scene{
 private:
 public:

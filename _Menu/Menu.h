@@ -6,7 +6,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_MENU_H
 #define GRAHEXXAGON_PROJEKT_MENU_H
 
-
+/*!
+ * @brief Scena reprezentujaca menu
+ */
 class Menu : public Scene{
 private:
     sf::RenderWindow *window;

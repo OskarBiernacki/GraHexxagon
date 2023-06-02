@@ -6,7 +6,7 @@
 #define GRAHEXXAGON_PROJEKT_EVENTMENAGER_H
 
 /*!
- * Klasa do zarzadzania eventami, np. Kliknieciami
+ * @brief Klasa do zarzadzania eventami, np. Kliknieciami
  */
 class EventMenager {
     /*!

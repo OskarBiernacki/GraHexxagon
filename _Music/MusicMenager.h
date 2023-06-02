@@ -8,6 +8,9 @@
 using namespace std;
 using sf::Music;
 
+/*!
+ * @brief Menager muzyki i odglosow aplikacji
+ */
 class MusicMenager {
 public:
     /*!

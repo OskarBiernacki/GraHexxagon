@@ -6,7 +6,9 @@
 
 using std::vector;
 using std::string;
-
+/*!
+ * @brief Klasa ktora zajmuje sie generowaniem/wczytywaniem/zapisywaniem planszy
+ */
 class Board {
     public:
         const int standard_size=5;

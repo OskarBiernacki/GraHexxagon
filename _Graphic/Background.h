@@ -10,7 +10,7 @@
 #include "random"
 
 /*!
- * Pojedyncza kulka, ktora lata w tle
+ * @brief Pojedyncza kulka, ktora lata w tle
  */
 struct bloob{
     float ax,ay;
@@ -45,6 +45,9 @@ struct bloob{
     }
 };
 
+/*!
+ * @brief Klasa generujaca tlo
+ */
 class Background {
 public:
     /*!

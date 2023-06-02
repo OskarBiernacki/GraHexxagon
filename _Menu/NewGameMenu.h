@@ -10,6 +10,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_NEWGAMEMENU_H
 #define GRAHEXXAGON_PROJEKT_NEWGAMEMENU_H
 
+/*!
+ * @brief Scena reprezentujaca wybor trybu nowej gry
+ */
 class NewGameMenu : public Scene{
 private:
     sf::RenderWindow *window;

@@ -5,7 +5,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_AI_H
 #define GRAHEXXAGON_PROJEKT_AI_H
 
-
+/*!
+ * @brief Klasa obslugujaca AI
+ */
 class AI {
 public:
     /*!

@@ -7,6 +7,9 @@
 
 using namespace sf;
 
+/*!
+ * @brief Pojedynczy przycisk i jego mechaniki
+ */
 class Button {
 private:
     std::string texOfButton;

@@ -6,7 +6,9 @@
 #ifndef GRAHEXXAGON_PROJEKT_SCOREBOARD_H
 #define GRAHEXXAGON_PROJEKT_SCOREBOARD_H
 
-
+/*!
+ * @brief Scena reprezentujaca scoreboard
+ */
 class Scoreboard : public Scene{
 public:
     /*!
