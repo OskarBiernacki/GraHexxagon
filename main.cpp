@@ -1,4 +1,4 @@
-/*! \mainpage Projekt na PJC
+ /*! \mainpage Projekt na PJC
  *  Projekt na pjc gra hexagon
  *  autor: Oskar Biernacki s27338
  *
